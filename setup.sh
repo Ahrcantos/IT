@@ -32,7 +32,7 @@ sed -i -e "s/AllowOverride None/AllowOverride All/g" /etc/apache2/apache2.conf
 
 #Add htaccess to secret directory
 touch /var/www/html/secret/.htaccess
-chmod 666 /var/www/secret/.htaccess
+chmod 666 /var/www/html/secret/.htaccess
 
 echo "AuthType Basic" >> /var/www/html/secret/.htaccess
 echo "AuthName \"Password Required\"" >> /var/www/html/secret/.htaccess
