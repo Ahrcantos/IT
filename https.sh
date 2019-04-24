@@ -13,7 +13,7 @@ openssl genrsa -out domain.key 2048
 openssl req -new -key domain.key -out domain.csr \
 -subj "/C=DE/ST=NRW/L=KaLi/O=Test Inc/OU=Test Department/CN=localhost"
 #Certificate
-openssl x509 -req -key domain.key -in domain.csr -out domain.crt -days 365
+openssl x509 -req -signkey domain.key -in domain.csr -out domain.crt -days 365
 
 
 #Add SSL to Apache2 Config
