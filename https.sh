@@ -28,3 +28,7 @@ echo "SSLEngine on" >> /etc/apache2/apache2.conf
 echo "SSLCertificateFile \"/var/www/cert/domain.crt\"" >> /etc/apache2/apache2.conf
 echo "SSLCertificateKeyFile \"/var/www/cert/domain.key\"" >> /etc/apache2/apache2.conf
 echo "</VirtualHost>" >> /etc/apache2/apache2.conf
+
+#Restart with SSL
+a2enmod ssl
+systemctl restart apache2
